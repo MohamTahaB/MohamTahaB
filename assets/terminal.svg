@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Mohamed Taha Bayoumi — software engineer</title>
+  <desc id="desc">A retro animated terminal showing Mohamed's name, focus on distributed systems, and a Pac-Man-inspired loading animation.</desc>
+
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.025"/>
+    </pattern>
+
+    <clipPath id="type-line-1">
+      <rect x="52" y="82" width="390" height="34">
+        <animate attributeName="width" values="0;390;390" keyTimes="0;0.48;1" dur="5.5s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-line-2">
+      <rect x="52" y="126" width="610" height="38">
+        <animate attributeName="width" values="0;0;610;610" keyTimes="0;0.48;0.88;1" dur="5.5s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .muted { fill: #8b949e; }
+      .green { fill: #7ee787; }
+      .cyan { fill: #79c0ff; }
+      .white { fill: #e6edf3; }
+      .blink { animation: blink 1s steps(1) infinite; }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: center; }
+      .dot { animation: dot-fade 2.4s linear infinite; }
+      .d2 { animation-delay: .25s; }
+      .d3 { animation-delay: .5s; }
+      .d4 { animation-delay: .75s; }
+      .d5 { animation-delay: 1s; }
+      .d6 { animation-delay: 1.25s; }
+      .d7 { animation-delay: 1.5s; }
+      @keyframes blink { 0%, 52% { opacity: 1; } 53%, 100% { opacity: 0; } }
+      @keyframes pulse { 0%, 100% { opacity: .65; } 50% { opacity: 1; } }
+      @keyframes dot-fade { 0%, 24% { opacity: .15; } 25%, 75% { opacity: 1; } 76%, 100% { opacity: .15; } }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="358" rx="14" fill="url(#screen)" stroke="#30363d" stroke-width="2"/>
+  <path d="M15 1h930a14 14 0 0 1 14 14v35H1V15A14 14 0 0 1 15 1z" fill="url(#bar)"/>
+  <path d="M1 50h958" stroke="#30363d"/>
+
+  <circle cx="25" cy="25" r="7" fill="#ff5f56"/>
+  <circle cx="49" cy="25" r="7" fill="#ffbd2e"/>
+  <circle cx="73" cy="25" r="7" fill="#27c93f"/>
+  <text x="480" y="31" text-anchor="middle" class="mono muted" font-size="14">taha@github ~ %</text>
+
+  <g clip-path="url(#type-line-1)">
+    <text x="52" y="106" class="mono" font-size="20">
+      <tspan class="green">taha@github</tspan><tspan class="muted">:</tspan><tspan class="cyan">~</tspan><tspan class="white">$ whoami</tspan>
+    </text>
+  </g>
+
+  <g clip-path="url(#type-line-2)">
+    <text x="52" y="152" class="mono white" font-size="25" font-weight="700" filter="url(#glow)">Mohamed Taha Bayoumi</text>
+  </g>
+
+  <g class="pulse">
+    <text x="52" y="191" class="mono muted" font-size="17">software engineer</text>
+    <text x="250" y="191" class="mono" font-size="17" fill="#30363d">//</text>
+    <text x="284" y="191" class="mono cyan" font-size="17">distributed systems · performance · infrastructure</text>
+  </g>
+
+  <text x="52" y="241" class="mono green" font-size="17">➜</text>
+  <text x="79" y="241" class="mono white" font-size="17">building reliable systems under real-world constraints</text>
+  <rect x="604" y="222" width="10" height="23" rx="1" fill="#7ee787" class="blink"/>
+
+  <g transform="translate(53 292)">
+    <path d="M0 0h854" stroke="#30363d" stroke-width="2" stroke-dasharray="2 10"/>
+
+    <g filter="url(#glow)">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;820 0;0 0" keyTimes="0;0.72;1" dur="8s" repeatCount="indefinite"/>
+        <path d="M0 0 L11.5 -8 A14 14 0 1 0 11.5 8 Z" fill="#f9e64f">
+          <animate attributeName="d"
+            values="M0 0 L11.5 -8 A14 14 0 1 0 11.5 8 Z;M0 0 L13.5 -3 A14 14 0 1 0 13.5 3 Z;M0 0 L11.5 -8 A14 14 0 1 0 11.5 8 Z"
+            dur="0.38s" repeatCount="indefinite"/>
+        </path>
+        <circle cx="2" cy="-8" r="1.8" fill="#111827"/>
+      </g>
+    </g>
+
+    <circle cx="140" r="4" fill="#f0f6fc" class="dot"/>
+    <circle cx="250" r="4" fill="#f0f6fc" class="dot d2"/>
+    <circle cx="360" r="4" fill="#f0f6fc" class="dot d3"/>
+    <circle cx="470" r="4" fill="#f0f6fc" class="dot d4"/>
+    <circle cx="580" r="4" fill="#f0f6fc" class="dot d5"/>
+    <circle cx="690" r="4" fill="#f0f6fc" class="dot d6"/>
+    <circle cx="800" r="4" fill="#f0f6fc" class="dot d7"/>
+  </g>
+
+  <text x="52" y="333" class="mono muted" font-size="12">READY.</text>
+  <text x="908" y="333" text-anchor="end" class="mono muted" font-size="12">INSERT COIN</text>
+
+  <rect x="1" y="1" width="958" height="358" rx="14" fill="url(#scanlines)" pointer-events="none"/>
+</svg>
